@@ -21,6 +21,7 @@ const Dashboard: React.FC = () => {
             <table className="coins-table">
                 <thead>
                     <tr>
+                        <th>Logo</th>
                         <th>Name</th>
                         <th>Price (USD)</th>
                         <th>1h Change</th>
@@ -34,6 +35,9 @@ const Dashboard: React.FC = () => {
                 <tbody>
                     {coins.map((coin) => (
                         <tr key={coin.id}>
+                            <td>
+                                <img src={coin.image} alt={coin.name} className="coin-logo" />
+                            </td>
                             <td>{coin.name} ({coin.symbol.toUpperCase()})</td>
                             <td>
                                 {coin.current_price != null && coin.current_price > 0 

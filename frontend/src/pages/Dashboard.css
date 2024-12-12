@@ -48,3 +48,9 @@
 .coins-table td:nth-child(5) {
     color: #ffcc00; /* Change color for percentage changes */
 }
+
+.coin-logo {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 8px; /* Space between logo and name */
+}
