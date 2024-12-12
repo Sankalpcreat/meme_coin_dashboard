@@ -1,23 +1,18 @@
 import logging
 from flask import Blueprint, jsonify, request
 from app.services import fetch_meme_coins, fetch_coin_details, fetch_coin_history
-from app.utils import filter_coin_data 
 
 bp = Blueprint('api', __name__)
 logger = logging.getLogger(__name__)
 
 @bp.get('/meme-coins')
 def get_meme_coins():
-    """
-    Fetch a list of meme coins and send the filtered response.
-    """
     try:
-        coins = fetch_meme_coins()  
-        filtered_coins = filter_coin_data(coins) 
-        return jsonify(filtered_coins), 200
+        coins = fetch_meme_coins()
+        return jsonify(coins), 200
     except Exception as e:
-        logger.error(f"Error fetching meme coins: {e}")
-        return jsonify({"error": "An error occurred while fetching meme coins."}), 500
+        logger.error(f"Error in get_meme_coins: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 
 @bp.get('/coin/<string:coin_id>')

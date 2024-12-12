@@ -1,0 +1,50 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.coins-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.coins-table th, .coins-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.coins-table th {
+    background-color: #2a2a3c;
+    color: #ffffff;
+}
+
+.coins-table tr:hover {
+    background-color: #3a3a4c;
+}
+
+.coins-table td {
+    color: #e0e0e0;
+}
+
+.coins-table td:nth-child(2),
+.coins-table td:nth-child(6),
+.coins-table td:nth-child(7) {
+    font-weight: bold;
+}
+
+.coins-table td:nth-child(3),
+.coins-table td:nth-child(4),
+.coins-table td:nth-child(5) {
+    color: #ffcc00; /* Change color for percentage changes */
+}
