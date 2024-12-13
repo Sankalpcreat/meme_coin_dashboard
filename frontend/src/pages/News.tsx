@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const MemeCoinNews: React.FC = () => {
     const [news, setNews] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const API_TOKEN = '0df6e1ac13da0e88777e00ef6a0e987c2a5605b9'; // Your CryptoPanic API token
+    const API_TOKEN = process.env.REACT_APP_API_TOKEN;
 
     useEffect(() => {
         const fetchNews = async () => {
