@@ -44,17 +44,17 @@ const Dashboard: React.FC = () => {
                                     ? `$${coin.current_price.toFixed(2)}` 
                                     : 'Price not available'}
                             </td>
-                            <td>
+                            <td className={coin.price_change_percentage_1h > 0 ? 'text-green-500' : coin.price_change_percentage_1h < 0 ? 'text-red-500' : 'text-gray-500'}>
                                 {coin.price_change_percentage_1h != null 
                                     ? `${coin.price_change_percentage_1h.toFixed(2)}%` 
                                     : 'N/A'}
                             </td>
-                            <td>
+                            <td className={coin.price_change_percentage_24h > 0 ? 'text-green-500' : coin.price_change_percentage_24h < 0 ? 'text-red-500' : 'text-gray-500'}>
                                 {coin.price_change_percentage_24h != null 
                                     ? `${coin.price_change_percentage_24h.toFixed(2)}%` 
                                     : 'N/A'}
                             </td>
-                            <td>
+                            <td className={coin.price_change_percentage_7d > 0 ? 'text-green-500' : coin.price_change_percentage_7d < 0 ? 'text-red-500' : 'text-gray-500'}>
                                 {coin.price_change_percentage_7d != null 
                                     ? `${coin.price_change_percentage_7d.toFixed(2)}%` 
                                     : 'N/A'}

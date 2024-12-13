@@ -12,6 +12,22 @@
     text-align: center;
 }
 
+/* Remove any conflicting navbar styles if they exist */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional styles to ensure proper centering */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .coins-table {
     width: 100%;
     border-collapse: collapse;
@@ -49,8 +65,38 @@
     color: #ffcc00; /* Change color for percentage changes */
 }
 
+/* New styles for price change colors */
+.text-green-500 {
+    color: #38a169; /* Tailwind green */
+}
+
+.text-red-500 {
+    color: #e53e3e; /* Tailwind red */
+}
+
+.text-gray-500 {
+    color: #a0aec0; /* Tailwind gray */
+}
+
 .coin-logo {
     width: 30px; /* Adjust the width as needed */
     height: 30px; /* Adjust the height as needed */
     margin-right: 8px; /* Space between logo and name */
+}
+
+/* Navbar styles */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional styles for the navbar links */
+nav a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
